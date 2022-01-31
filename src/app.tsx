@@ -1,3 +1,4 @@
+import Footer from './Footer';
 import { HashRouteContext, HashRouteProvider } from './HashRouteContext';
 import Header from './Header';
 import Router from './Router';
@@ -7,6 +8,7 @@ export function App() {
     <HashRouteProvider>
       <Header />
       <Router />
+      <Footer />
     </HashRouteProvider>
   );
 }
