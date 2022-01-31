@@ -5,12 +5,12 @@ import medium from '../assets/medium.svg';
 
 const linkedinURL = 'https://linkedin.com/ditkin';
 const githubURL = 'https://github.com/ditkin';
-const twitterURL = 'twitter.com/david_itkin';
-const mediumURL = 'medium.com/ditkin';
+const twitterURL = 'https://twitter.com/david_itkin';
+const mediumURL = 'https://medium.com/ditkin';
 
 export default function Footer() {
   return (
-    <div class="fixed bottom-0 left-0 w-full text-center border-t border-black p-4 h-20 bg-slate-300 flex align-middle space-around">
+    <div class="fixed bottom-0 left-0 w-full text-center border-t border-black p-4 h-20 bg-slate-300 flex align-middle justify-around">
       <a href={linkedinURL} target="_blank">
         <img class="w-4 h-4" src={linkedin} /> ditkin
       </a>

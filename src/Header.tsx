@@ -18,7 +18,7 @@ export default function Header() {
   const routeToBlog = useRouteUpdater(routes.BLOG);
 
   return (
-    <div class="w-full py-2 px-2 flex items-center justify-between">
+    <div class="w-full py-2 px-2 flex items-center justify-between border-b border-black bg-slate-300">
       <span
         class="w-40 flex justify-around items-center cursor-pointer"
         onClick={routeToBlog}
