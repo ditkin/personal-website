@@ -1,7 +1,7 @@
-import Footer from './Footer';
-import { HashRouteContext, HashRouteProvider } from './HashRouteContext';
+import { HashRouteProvider } from './HashRouteContext';
 import Header from './Header';
 import Router from './Router';
+import Footer from './Footer';
 
 export function App() {
   return (

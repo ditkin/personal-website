@@ -1,6 +1,6 @@
 import { createContext, ComponentChildren } from 'preact';
 import { useCallback, useMemo, useState } from 'preact/hooks';
-import { PROJECTS } from './constants/routes';
+import { BLOG } from './constants/routes';
 
 interface HashRouteContextInterface {
   route: string;
@@ -9,11 +9,11 @@ interface HashRouteContextInterface {
 
 const HashRouteContext = createContext<HashRouteContextInterface>({
   route: '',
-  handleRouteChange: (newRoute) => {},
+  handleRouteChange: () => {},
 });
 
 function getHashRoute(): string {
-  return window.location.hash.substring(1) || PROJECTS;
+  return window.location.hash.substring(1) || BLOG;
 }
 
 type ChildrenProps = {
@@ -28,6 +28,7 @@ function HashRouteProvider({ children }: ChildrenProps) {
     window.location.hash = newRoute;
   }, []);
 
+  // memoize value object to prevent rerenders
   const contextValueObject = useMemo(
     () => ({
       route,
@@ -35,6 +36,7 @@ function HashRouteProvider({ children }: ChildrenProps) {
     }),
     [route, handleRouteChange]
   );
+
   return (
     <HashRouteContext.Provider value={contextValueObject}>
       {children}
