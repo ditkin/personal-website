@@ -1,9 +1,16 @@
 import { Article } from './types/Article';
 import { BLOG } from './constants/routes';
 import { useRoute, useRouteUpdater } from './hooks/useRoute';
-import firstArticle from './blogArticles/firstArticle';
+import officeArticle from './blogArticles/officeArticle';
 
-const articles = [firstArticle];
+const dateFormatOptions: Intl.DateTimeFormatOptions = {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+};
+
+const articles = [officeArticle];
 
 function getCurrentArticle(route: string): Article | false | undefined {
   const routeChunks = route.split('/').filter(Boolean);
@@ -20,7 +27,12 @@ export function ArticleLink({ article }: { article: Article }) {
 
   return (
     <div class="mb-3" onClick={routeToArticle}>
-      {article.name}
+      <b>{article.title}</b>
+      <br />
+      {new Date(article.timestamp).toLocaleDateString(
+        'en-US',
+        dateFormatOptions
+      )}
     </div>
   );
 }
