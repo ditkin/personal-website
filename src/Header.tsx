@@ -18,7 +18,10 @@ export default function Header() {
   const routeToBlog = useRouteUpdater(routes.BLOG);
 
   return (
-    <div class="w-full py-2 px-2 flex items-center justify-between border-b border-black bg-slate-300">
+    <div
+      class="w-full py-2 px-2 flex items-center justify-between border-b border-black bg-slate-300"
+      style={{ paddingLeft: '15%', paddingRight: '15%' }}
+    >
       <span
         class="w-40 flex justify-around items-center cursor-pointer"
         onClick={routeToBlog}
@@ -27,7 +30,7 @@ export default function Header() {
         DAVID ITKIN
       </span>
       <span class="w-64 flex justify-around">
-        {Object.values(routes).map((route) => (
+        {Object.values(routes).map(route => (
           <HeaderButton route={route} />
         ))}
       </span>

@@ -1,6 +1,7 @@
 import { ABOUT, BLOG, PROJECTS, RESUME } from './constants/routes';
 import { useRoute } from './hooks/useRoute';
 import Blog from './Blog';
+import AboutMe from './AboutMe';
 
 type routeType = typeof ABOUT | typeof BLOG | typeof PROJECTS | typeof RESUME;
 
@@ -13,22 +14,10 @@ export default function Router() {
   const baseRoute = getBaseRoutePage(route);
 
   return (
-    <div class="pb-14">
+    <div class="pb-14" style={{ paddingLeft: '15%', paddingRight: '15%' }}>
       {baseRoute === BLOG && <Blog />}
       {baseRoute === PROJECTS && 'projects'}
-      {baseRoute === ABOUT && (
-        /** @TODO remove, filler to test long screen */
-        <div>
-          {Array(100)
-            .fill('aboit')
-            .map((x) => (
-              <>
-                <br />
-                {x}
-              </>
-            ))}
-        </div>
-      )}
+      {baseRoute === ABOUT && <AboutMe />}
       {baseRoute === RESUME && 'resume'}
     </div>
   );
