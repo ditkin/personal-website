@@ -48,7 +48,6 @@ export default function AboutMe() {
               controls
               src="../assets/sweetPea.mov"
               type="video/quicktime"
-              preload="none"
             />
           </li>
           <br />
