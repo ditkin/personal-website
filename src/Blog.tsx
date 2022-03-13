@@ -26,7 +26,7 @@ export function ArticleLink({ article }: { article: Article }) {
   const routeToArticle = useRouteUpdater(`${BLOG}/${article.id}`);
 
   return (
-    <div class="mb-3" onClick={routeToArticle}>
+    <div class="cursor-pointer mb-3" onClick={routeToArticle}>
       <b>{article.title}</b>
       <br />
       {new Date(article.timestamp).toLocaleDateString(
@@ -47,7 +47,11 @@ export default function Blog() {
   if (CurrentArticle) {
     return (
       <div>
-        <span onClick={routeToBlogListing}>{'< Back'}</span>
+        <span class="text-blue-600 cursor-pointer" onClick={routeToBlogListing}>
+          {'< Back'}
+        </span>
+        <br />
+        <br />
         <CurrentArticle />
       </div>
     );

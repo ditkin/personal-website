@@ -15,7 +15,7 @@ export default function Router() {
 
   return (
     <div
-      class="pb-14 text-xl"
+      class="pb-28 text-xl"
       style={{ paddingLeft: '27%', paddingRight: '27%' }}
     >
       <br />
