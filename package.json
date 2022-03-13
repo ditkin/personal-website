@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite",
     "pw": "prettier --write \"src/**/*.ts*\"",
-    "build": "tsc && vite build;cp assets/sweetPea.mov dist/assets",
+    "build": "tsc && vite build;cp assets/sweetPea.mov docs/assets",
     "preview": "vite preview"
   },
   "dependencies": {
