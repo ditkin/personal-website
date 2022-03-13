@@ -11,7 +11,7 @@ function getCurrentArticle(route: string): Article | false | undefined {
 
   return (
     routeChunks.length > 1 &&
-    articles.find((article) => article.id === lastRouteChunk)
+    articles.find(article => article.id === lastRouteChunk)
   );
 }
 
@@ -43,7 +43,7 @@ export default function Blog() {
 
   return (
     <>
-      {articles.map((article) => (
+      {articles.map(article => (
         <ArticleLink article={article} />
       ))}
     </>
