@@ -14,11 +14,16 @@ export default function Router() {
   const baseRoute = getBaseRoutePage(route);
 
   return (
-    <div class="pb-14" style={{ paddingLeft: '15%', paddingRight: '15%' }}>
+    <div
+      class="pb-14 text-xl"
+      style={{ paddingLeft: '27%', paddingRight: '27%' }}
+    >
+      <br />
+      <br />
       {baseRoute === BLOG && <Blog />}
-      {baseRoute === PROJECTS && 'projects'}
+      {baseRoute === PROJECTS && 'Coming soon!'}
       {baseRoute === ABOUT && <AboutMe />}
-      {baseRoute === RESUME && 'resume'}
+      {baseRoute === RESUME && 'Coming soon!'}
     </div>
   );
 }

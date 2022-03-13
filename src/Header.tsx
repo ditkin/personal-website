@@ -19,17 +19,17 @@ export default function Header() {
 
   return (
     <div
-      class="w-full py-2 px-2 flex items-center justify-between border-b border-black bg-slate-300"
-      style={{ paddingLeft: '15%', paddingRight: '15%' }}
+      class="w-full py-2 px-2 flex items-center justify-between border-b border-black bg-slate-300 text-xl"
+      style={{ paddingLeft: '20%', paddingRight: '20%' }}
     >
       <span
-        class="w-40 flex justify-around items-center cursor-pointer"
+        class="w-48 flex justify-around items-center cursor-pointer"
         onClick={routeToBlog}
       >
         <img class="h-16 w-16 rounded-lg shadow-xl" src={funnyKitty} />
         DAVID ITKIN
       </span>
-      <span class="w-64 flex justify-around">
+      <span class="w-96 flex justify-around">
         {Object.values(routes).map(route => (
           <HeaderButton route={route} />
         ))}
